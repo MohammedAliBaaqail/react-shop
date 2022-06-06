@@ -1,0 +1,101 @@
+
+   .menu-item{
+       
+        transition: transform .2s;
+        max-width: 20%;
+        height: 250px;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        margin: 35px;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+       
+       border: 3px solid #333333;
+       border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+       text-transform: uppercase;
+       position: relative;
+
+       &:hover {
+           cursor: pointer;
+
+           & .background-image {
+                transform: scale(1.2);
+                transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+           }
+           & .content {
+            background-color: rgba(255, 255, 255, 0.79) ;
+            
+           }
+        
+    }
+
+    //    &::before {
+    //        content: '';
+    //        border: 2px solid #353535;
+    //        display: block;
+    //        width: 100%;
+    //        height: 100%;
+    //        position: absolute;
+    //        top: 50%;
+    //        left: 50%;
+    //        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+    //        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    //    }
+   
+       
+   
+       &:hover {
+           transform: scale(1.1);
+       }
+   
+    
+   }
+   
+
+  .background-image{
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      
+  }
+   
+  
+   .content{
+  
+    background-color: rgba(255, 255, 255, 0.61) ;
+    backdrop-filter:blur(5px);
+    
+    border-radius: 5px;
+    height: 90px;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    
+    position: absolute;
+    
+    
+   
+   
+       .title{
+           font-weight: bold;
+           margin-bottom: 5px;
+           font-size:22px;
+   
+   
+       }
+   
+       .subtitle{
+   
+       }
+   }
+   
+   
+    
