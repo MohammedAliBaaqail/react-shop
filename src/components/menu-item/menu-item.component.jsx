@@ -1,20 +1,28 @@
 import React from "react";
 import './menu-item.styles.scss'
+import Tilt from 'react-tilt'
+import {  withRouter ,Link } from 'react-router-dom';
 
 
 
-const MenuItem = ({title, imageUrl} ) => (
 
-<div className="menu-item">
+
+const MenuItem = ({title, imageUrl, size ,linkUrl} ) => (
+<Tilt options={{ scale: 1.0,speed: 1000,max: 20 ,perspective:1000,}} className='tilt' style={{}}>
+<Link to={linkUrl} >  
+<div  className={`${size} menu-item` } >
     <div className="background-image"
     style={{
         backgroundImage:`url(${imageUrl})`
           }}></div>
+          
     <div className="content">
         <h1 className="title">{title}</h1>
-        <span className="subtitle">عنوان فرعي</span>
+        <span className="subtitle">Shop Now</span>
     </div>
 </div>
+</Link>
+</Tilt>
 
 );
 

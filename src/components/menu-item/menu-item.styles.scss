@@ -1,33 +1,41 @@
 
    .menu-item{
-       
-        transition: transform .2s;
-        max-width: 20%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px ;
+    transition: transform 0.5s cubic-bezier(0.65, 0.45, 0.45, 2.95);
+        transform-style: preserve-3d !important;
+        // width: 30%;
         height: 250px;
         flex: 1 1 auto;
         display: flex;
         align-items: center;
         justify-content: center;
         border: 2px solid black;
-        margin: 35px;
+        // margin: 20px;
         background-position: center;
         background-size: cover;
         overflow: hidden;
        
-       border: 3px solid #333333;
-       border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+        border: 3px solid #333333;
+       border-radius: 2px;
        text-transform: uppercase;
        position: relative;
 
        &:hover {
            cursor: pointer;
-
+           box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
            & .background-image {
                 transform: scale(1.2);
+                
                 transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+                
+                
+               
+                
            }
            & .content {
-            background-color: rgba(255, 255, 255, 0.79) ;
+            background-color: rgba(255, 255, 255, 0.647) ;
+            
+           
             
            }
         
@@ -49,10 +57,12 @@
        
    
        &:hover {
-           transform: scale(1.1);
+           transform: scale(1.05);
        }
    
-    
+       &.large{
+           height: 380px
+       }
    }
    
 
@@ -62,12 +72,14 @@
       background-size: cover;
       background-position: center;
       
+      
   }
    
   
    .content{
-  
-    background-color: rgba(255, 255, 255, 0.61) ;
+       
+   
+    background-color: rgba(255, 255, 255, 0.377) ;
     backdrop-filter:blur(5px);
     
     border-radius: 5px;
@@ -88,14 +100,26 @@
            font-weight: bold;
            margin-bottom: 5px;
            font-size:22px;
-   
+          
+         
+          
    
        }
    
        .subtitle{
-   
+   color: #333333;
        }
    }
    
    
+   .tilt {
     
+       width: 30%;
+       margin: 10px;
+    box-shadow: 0 0px 0px rgba(36, 36, 36, 0.923) !important;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px ;
+  }
+  
+  a {
+    all: unset;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import './directory.styles.scss'
 import MenuItem from "../menu-item/menu-item.component";
+import Tilt from 'react-vanilla-tilt'
 
 
 class Directory extends React.Component {
@@ -10,30 +11,38 @@ class Directory extends React.Component {
         this.state = {
             sections: [
                 {
-                    title: 'عنوان',
-                    imageUrl:'https://i.pinimg.com/originals/7a/29/64/7a2964be867fb96f0c6adc7c5d4adf61.jpg',
-                    id:1
+                    title: 'Hats',
+                    imageUrl:'https://images.unsplash.com/photo-1620231109648-302d034cb29b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                    id:1,
+                    linkUrl:'hats'
                 },
                 {
-                    title: 'عنوان',
-                    imageUrl:'https://i.pinimg.com/originals/7a/29/64/7a2964be867fb96f0c6adc7c5d4adf61.jpg',
-                    id:2
+                    title: 'Jackets',
+                    imageUrl:'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80',
+                    id:2,
+                    linkUrl:''
                 },
                 {
-                    title: 'عنوان',
-                    imageUrl:'https://i.pinimg.com/originals/7a/29/64/7a2964be867fb96f0c6adc7c5d4adf61.jpg',
-                    id:3
+                    title: 'Sneakers',
+                    imageUrl:'https://images.unsplash.com/photo-1608667508764-33cf0726b13a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+                    id:3,
+                    linkUrl:''
                 },
                 {
-                    title: 'عنوان',
-                    imageUrl:'https://i.pinimg.com/originals/7a/29/64/7a2964be867fb96f0c6adc7c5d4adf61.jpg',
-                    id:4
+                    title: 'Women',
+                    imageUrl:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                    id:4,
+                    linkUrl:'',
+                    size:'large',
                 },
                 {
-                    title: 'عنوان',
-                    imageUrl:'https://i.pinimg.com/originals/7a/29/64/7a2964be867fb96f0c6adc7c5d4adf61.jpg',
-                    id:5
+                    title: 'Men',
+                    imageUrl:'https://images.unsplash.com/photo-1602810316693-3667c854239a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+                    id:5,
+                    linkUrl:'',
+                    size:'large',
                 },
+              
         ]
         }
     }
@@ -42,8 +51,9 @@ class Directory extends React.Component {
         return (
             <div className="directory-menu">
                 {
-                    this.state.sections.map(({title, imageUrl, id}) =>(
-                    <MenuItem key={id} title={title} imageUrl={imageUrl}/>    
+                    this.state.sections.map(({ id, ...otherSectionProps}) =>(
+                    <MenuItem key={id} {...otherSectionProps}/>
+                       
                     ))
                 }
                   
