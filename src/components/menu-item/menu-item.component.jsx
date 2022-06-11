@@ -1,7 +1,7 @@
 import React from "react";
 import './menu-item.styles.scss'
 import Tilt from 'react-tilt'
-import {  withRouter ,Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 

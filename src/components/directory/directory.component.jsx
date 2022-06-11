@@ -1,7 +1,7 @@
 import React from "react";
 import './directory.styles.scss'
 import MenuItem from "../menu-item/menu-item.component";
-import Tilt from 'react-vanilla-tilt'
+
 
 
 class Directory extends React.Component {
