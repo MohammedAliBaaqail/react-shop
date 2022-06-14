@@ -5,7 +5,7 @@
     
         transform-style: preserve-3d !important;
         // width: 30%;
-        height: 250px;
+        height: 350px;
         flex: 1 1 auto;
         display: flex;
         align-items: center;
@@ -15,7 +15,7 @@
         background-position: center;
         background-size: cover;
         overflow: hidden;
-       
+        
         border: 3px solid #333333;
        border-radius: 2px;
        text-transform: uppercase;
@@ -62,9 +62,7 @@
            transform: scale(1.05);
        }
    
-       &.large{
-           height: 380px
-       }
+       
    }
    
 
@@ -117,7 +115,7 @@
    
    
    .tilt {
-    
+       
        width: 30%;
        margin: 10px;
     box-shadow: 0 0px 0px rgba(36, 36, 36, 0.923) !important;
@@ -125,6 +123,11 @@
    
     &:hover{
         z-index: +1;
+        
+    }
+    &.large{
+        width: 45.55%;
+       
         
     }
   }

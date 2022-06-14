@@ -2,17 +2,12 @@ import React from 'react';
 import ReactDOM from "react-dom/client";
 import './index.css';
 import App from './App';
-import { BrowserRouter , Routes, Route  } from 'react-router-dom';
+// import { BrowserRouter , Routes, Route  } from 'react-router-dom';
 
-import HomePage from './pages/homepage/homepage.component';
-import Error from './pages/error/error.componant';
+// import HomePage from './pages/homepage/homepage.component';
+// import Error from './pages/error/error.componant';
 
 
-const HatsPage = () => (
-  <div>
-    <h1>Hats Page</h1>
-  </div>
-)
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -21,9 +16,6 @@ root.render(
 
   <App/>
 
-
-
- 
 );
 
 

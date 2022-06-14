@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 
 
 const MenuItem = ({title, imageUrl, size ,linkUrl} ) => (
-<Tilt options={{ scale: 1.0,speed: 1000,max: 20 ,perspective:1000,}} className='tilt' style={{}}>
+<Tilt options={{ scale: 1.0,speed: 1000,max: 20 ,perspective:1000,}} className={`${size} tilt`} style={{}}>
 <Link to={linkUrl} >  
-<div  className={`${size} menu-item` } >
+<div  className= "menu-item"  >
     <div className="background-image"
     style={{
         backgroundImage:`url(${imageUrl})`
