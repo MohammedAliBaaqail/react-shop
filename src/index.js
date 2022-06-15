@@ -8,7 +8,6 @@ import App from './App';
 // import Error from './pages/error/error.componant';
 
 
-
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );

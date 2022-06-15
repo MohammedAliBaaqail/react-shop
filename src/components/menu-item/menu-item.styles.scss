@@ -3,7 +3,8 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px ;
     transition: transform 0.5s cubic-bezier(0.15, 0.45, 0.45, 2.95);
     
-        transform-style: preserve-3d !important;
+        transform-style: preserve-3d ;
+        transform: perspective(1000px);
         // width: 30%;
         height: 350px;
         flex: 1 1 auto;
@@ -14,55 +15,40 @@
         // margin: 20px;
         background-position: center;
         background-size: cover;
-        overflow: hidden;
+        // overflow: hidden;
         
         border: 3px solid #333333;
        border-radius: 2px;
        text-transform: uppercase;
        position: relative;
-    
-       &:hover {           
-           cursor: pointer;          
-           transition: box-shadow 0.3s ease-in-out !important;
-           box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-           & .background-image {
-                transform: scale(1.2);
-                
-                transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-                
-                
-               
-                
-           }
-           & .content {
-            background-color: rgba(255, 255, 255, 0.647) ;
-            
-           
-            
-           }
-        
+     
+       &.large{
+        height: 430px;
     }
-
-    //    &::before {
-    //        content: '';
-    //        border: 2px solid #353535;
-    //        display: block;
-    //        width: 100%;
-    //        height: 100%;
-    //        position: absolute;
-    //        top: 50%;
-    //        left: 50%;
-    //        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-    //        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-    //    }
-   
-       
-   
-       &:hover {
-           transform: scale(1.05);
-       }
-   
-       
+       &:hover {           
+           cursor: pointer; 
+           
+           transform: scale(1.1);         
+           transition: box-shadow 0.3s ease-in-out !important;
+           
+           box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        //    & .background-image {
+        //         transform: scale(1.2);
+                
+        //         transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+         
+        //    }
+           & .content {
+            backdrop-filter:none;
+            transform:  scale(1.2) translateZ(100px);
+            
+            background-color: rgb(255, 255, 255) ;
+            transition: box-shadow 0.3s ease-in-out !important;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+           }
+         }
+               
+ 
    }
    
 
@@ -77,11 +63,12 @@
    
   
    .content{
-       
-   
-    background-color: rgba(255, 255, 255, 0.377) ;
-    backdrop-filter:blur(5px);
-    
+        transition: transform 0.2s ease-in-out  ;
+        transform: translateZ(100px);
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        background-color: rgba(255, 255, 255, 0.33) ;
+    // backdrop-filter:blur(5px);
+    backdrop-filter:blur(3px);
     border-radius: 5px;
     height: 90px;
     padding: 0 25px;
@@ -97,13 +84,14 @@
    
    
        .title{
-           
+        
+           color: rgb(0, 0, 0);
            font-weight: bold;
            margin-bottom: 5px;
            font-size:22px;
         //    mix-blend-mode: overlay;
           
-         
+       
           
    
        }
@@ -115,10 +103,10 @@
    
    
    .tilt {
-       
-       width: 30%;
-       margin: 10px;
-    box-shadow: 0 0px 0px rgba(36, 36, 36, 0.923) !important;
+        transform-style: preserve-3d ;
+        width: 30%;
+        margin: 10px;
+        box-shadow: 0 0px 0px rgba(36, 36, 36, 0.923) !important;
     
    
     &:hover{
@@ -126,10 +114,14 @@
         
     }
     &.large{
-        width: 45.55%;
        
+        width: 45.5%;
+        
         
     }
   }
 
+  .link{
+    transform-style: preserve-3d ; 
+  }
 
