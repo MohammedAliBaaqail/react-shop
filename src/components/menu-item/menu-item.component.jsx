@@ -1,13 +1,10 @@
 import React, {useCallback} from "react";
 import './menu-item.styles.scss'
 // import Tilt from 'react-tilt'
-import Tilt from 'react-vanilla-tilt'
+import Tilt from 'react-tilt'
 import { Link ,useNavigate }  from 'react-router-dom';
 
 
-
-{/* <Tilt options={{ scale: 1.0,speed: 1000,max: 20 ,perspective:1000,}} className={`${size} tilt`} style={{}}></Tilt> */}
-{/* <div  className=  {`${size} menu-item`} > */}
 
 function MenuItem  ({title, imageUrl, size ,linkUrl} )  {
 
@@ -15,7 +12,7 @@ function MenuItem  ({title, imageUrl, size ,linkUrl} )  {
     const handleOnClick = useCallback(() => navigate(linkUrl, {replace: true}), [navigate]);
 
  return(
-    <Tilt options={{ scale: 1.0,speed: 1000,max: 20 ,perspective:1000,}} className={`${size} tilt`} style={{}} onClick={handleOnClick}>
+    <Tilt options={{   scale:1, perspective:1000,max : 30 }} className={`${size} tilt`}   style={{}} onClick={handleOnClick}>
         <div  className=  {`${size} menu-item`} > 
         <div className="background-image"
         style={{
