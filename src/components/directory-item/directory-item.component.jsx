@@ -1,13 +1,13 @@
 import Tilt from "react-tilt";
 import React, { useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./category-item.styles.scss";
+import "./directory-item.styles.scss";
 
-const CategoryItem = ({ category }) => {
+const DirectoryItem = ({ category }) => {
   const { imageUrl, title, size, linkUrl } = category;
 
   const navigate = useNavigate();
-  const handleOnClick = () => { navigate(`${linkUrl}`); } 
+  const handleOnClick = () => { navigate(`shop/${linkUrl}`); } 
    
   return (
     <Tilt
@@ -16,7 +16,7 @@ const CategoryItem = ({ category }) => {
       style={{}}
       
     >
-      <div onClick={handleOnClick} className={`${size} category-container`}>
+      <div onClick={handleOnClick} className={`${size} directory-item-container`}>
         <div
           className="background-image"
           style={{
@@ -33,4 +33,4 @@ const CategoryItem = ({ category }) => {
   );
 };
 
-export default CategoryItem;
+export default DirectoryItem;

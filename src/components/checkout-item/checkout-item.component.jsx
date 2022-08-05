@@ -22,7 +22,7 @@ const CheckoutItem = ({ cartItem }) => {
       <span className='name'> {name} </span>
       <span className='quantity'>
         <div className='arrow' onClick={removeItemHandler}>
-        &#x2212;git 
+        &#x2212;
         </div>
         <span className='value'>{quantity}</span>
         <div className='arrow' onClick={addItemHandler}>
