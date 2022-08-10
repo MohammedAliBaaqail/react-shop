@@ -15,6 +15,7 @@
     "react-tilt": "^0.1.4",
     "react-vanilla-tilt": "^1.0.0",
     "sass": "^1.52.2",
+    "styled-components": "^5.3.5",
     "vanilla-tilt": "^1.7.2",
     "web-vitals": "^2.1.4"
   },

@@ -11,20 +11,37 @@
   top: 90px;
   right: 40px;
   z-index: 5;
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(12px);
 
   .cart-items {
     height: 470px;
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    .empty-message{
+      font-size: 25px;
+      margin: auto;
+      
+    }
   }
 
   button {
     margin-top: auto;
   }
+  ::-webkit-scrollbar {
+    width: 5px;
+   
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #404040;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+  }
 }
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
-}
+
+

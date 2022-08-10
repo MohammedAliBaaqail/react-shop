@@ -123,6 +123,7 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
+  
 
   &:hover {
     background-color: white;
@@ -141,10 +142,12 @@
   }
 
   &.inverted {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    
+    backdrop-filter: blur(4px)!important;
     color: black;
     border: 1px solid black;
-
+    
     &:hover {
       background-color: black;
       color: white;

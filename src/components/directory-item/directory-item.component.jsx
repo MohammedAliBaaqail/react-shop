@@ -1,13 +1,14 @@
 import Tilt from "react-tilt";
 import React, { useCallback } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "./directory-item.styles.scss";
+
 
 const DirectoryItem = ({ category }) => {
   const { imageUrl, title, size, linkUrl } = category;
 
   const navigate = useNavigate();
-  const handleOnClick = () => { navigate(`shop/${linkUrl}`); } 
+  const onNavigateHandler = () => navigate(`shop/${linkUrl}`); 
    
   return (
     <Tilt
@@ -16,7 +17,7 @@ const DirectoryItem = ({ category }) => {
       style={{}}
       
     >
-      <div onClick={handleOnClick} className={`${size} directory-item-container`}>
+      <div onClick={onNavigateHandler} className={`${size} directory-item-container`}>
         <div
           className="background-image"
           style={{
