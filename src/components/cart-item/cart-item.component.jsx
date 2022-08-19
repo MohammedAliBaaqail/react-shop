@@ -1,17 +1,37 @@
-import { CartItemContainer, ItemDetails } from './cart-item.styles';
+import { useDispatch, useSelector } from 'react-redux';
+
+import {
+  clearItemFromCart,
+} from '../../store/cart/cart.action';
+import { selectCartItems } from '../../store/cart/cart.selector';
+
+import './cart-item.styles.scss';
 
 const CartItem = ({ cartItem }) => {
+
   const { name, imageUrl, price, quantity } = cartItem;
+  const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
+
+  const clearItemHandler = () =>
+    dispatch(clearItemFromCart(cartItems, cartItem));
+
+
+
   return (
-    <CartItemContainer>
+    <div className='cart-item-container'>
       <img src={imageUrl} alt={`${name}`} />
-      <ItemDetails>
-        <span>{name}</span>
-        <span>
+      <div className='item-details'>
+        <span className='name'>{name}</span>
+        <span className='price'>
           {quantity} x ${price}
+        
         </span>
-      </ItemDetails>
-    </CartItemContainer>
+      </div>
+      <div className='remove-button' onClick={clearItemHandler}>
+        &#10005;
+      </div>
+    </div>
   );
 };
 
