@@ -1,1 +1,1 @@
-React E-commerce Project Redux and Styled components libraries
+React E-commerce Project with Redux and Styled components libraries
